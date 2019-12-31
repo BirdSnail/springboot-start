@@ -1,9 +1,13 @@
 package com.bilibili.springboot.learning.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author BirdSnail
@@ -11,8 +15,11 @@ import java.util.Date;
  */
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Article {
 
+    @JsonIgnore
     private Long id;
 
     private String author;
@@ -23,5 +30,6 @@ public class Article {
 
     private Date createTime;
 
+    private List<Reader> reader;
 
 }
