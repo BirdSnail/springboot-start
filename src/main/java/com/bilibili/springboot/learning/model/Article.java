@@ -1,5 +1,6 @@
 package com.bilibili.springboot.learning.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +20,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Article {
 
-    @JsonIgnore
     private Long id;
 
     private String author;
@@ -28,6 +28,7 @@ public class Article {
 
     private String content;
 
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createTime;
 
     private List<Reader> reader;
