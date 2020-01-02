@@ -1,0 +1,37 @@
+spring:
+  server:
+    port: 8081
+  thymeleaf:
+    cach: false
+    enabled: true
+    prefix: classpath:/templates/home.html
+
+  application:
+    name: "Bootstrap Spring Boot"
+
+  jackson:
+    date-format: "yyyy-MM-dd HH:mm:ss"
+    time-zone: GMT+8
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: "jdbc:h2:mem:bootapp;DB_CLOSE_DELAY=-1"
+    username: sa
+    password:
+
+family:
+    family-name: "happy family"
+    father:
+      name: laowang
+      age: 18
+    mather:
+      alias:
+        - one
+        - two
+    children:
+      name: 5
+      friends:
+        - {name: heihei, sex: boy}
+        - {name: haha, sex: girl}
+
+
